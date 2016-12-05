@@ -3,6 +3,13 @@ Node-RED
 Node-red-contrib-smstools
 node-red-node-mysql
 node-red-contrib-soap
+node-red-contrib-ibmpush
+node-red-contrib-soapserver
+node-red-contrib-sms-free-mobile
+node-gcm --save
+
+
+//sudo npm install node-gcm -g
 
 
 
