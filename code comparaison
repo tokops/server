@@ -1,0 +1,15 @@
+var cpt = 0;
+var trouve = 0;
+for (var j = 0; j <= (msg.rfid_arduino.length - 1); j++) {
+    
+    cpt=0;
+    trouve=0;
+    //for (var k = 0; k <= (msg.rfid.length - 1); j++) {
+    while (trouve === 0 && cpt < (msg.rfid.length) ) {
+        if (msg.rfid_arduino[i]==msg.rfid[cpt]) {
+            msg.rfid.splice(msg.rfid.indexOf(cpt),1);
+            trouve = 1;
+        }
+        cpt++;
+    }
+}

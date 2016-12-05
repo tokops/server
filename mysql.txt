@@ -1,0 +1,38 @@
+lancer MySQL
+
+mysql -u root -ppickit
+
+use pickit
+
+create table objects (id smallint unsigned not null auto_increment, obj_name varchar(40) not null, rfid_tag smallint not null, code_barre smallint not null, primary key(id));
+
+create table list (id_list smallint unsigned not null, id smallint unsigned not null, foreign key (id) references objects(id), primary key(id_list));
+
+show tables;
+
+show columns from list;
+
+show columns from objects;
+
+
+insert into objects values (1, 'clef', '1', '11');
+insert into objects values (4, 'porte feuille', '4', '44');
+insert into objects values (3, 'chargeur', '3', '33');
+insert into objects values (2, 'ordinateur', '2', '22');
+
+select * from objects;
+
+insert into list values  (1,1);
+insert into list values  (2,2);
+insert into list values  (3,3);
+insert into list values  (4,4);
+
+select * from list;
+
+//create new customer user with specific ip
+create user 'jarrar-K501LX'@'192.168.43.191' IDENTIFIED by 'pickit';
+grant all privileges on *.* to 'jarrar-K501LX'@'192.168.43.191' with grant option;
+
+//create new customer user with specific ip
+create user 'jarrar-K501LX'@'%' IDENTIFIED by 'pickit';
+grant all privileges on *.* to 'jarrar-K501LX'@'%' with grant option;
