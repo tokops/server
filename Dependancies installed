@@ -1,0 +1,33 @@
+Node-RED
+
+Node-red-contrib-smstools
+node-red-node-mysql
+node-red-contrib-soap
+
+
+
+http://localhost:1880/#flow/97484b8.73501b8
+
+
+
+
+npm install node-red-contrib-soapserver
+
+
+
+
+//<!DOCTYPE HTML>
+<html>
+    <head>
+    <title>Bonjour Monsieur Pepito</title>
+    </head>
+    <body onload="wsConnect();" onunload="ws.disconnect();">
+        <font face="Arial">
+        <h1>Simple Live Display</h1>
+        <div id="messages"></div>
+        <button type="button" onclick='doit("click");'>Click to send message</button>
+        <hr/>
+        <div id="status">unknown</div>
+        </font>
+    </body>
+</html>
